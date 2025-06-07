@@ -78,3 +78,12 @@ function mostrarResumo() {
         div.innerHTML += `<p>${humor} x${resumo[humor]}</p>`;
     }
 }
+
+window.onload = function () {
+    const nome = localStorage.getItem('nomeUsuario');
+    if (nome && document.getElementById('diarioTitulo')) {
+        document.getElementById('diarioTitulo').innerText = `Diário de "${nome}"...`;
+        mostrarHistorico();
+        mostrarResumo();
+    }
+}
