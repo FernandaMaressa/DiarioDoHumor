@@ -7,3 +7,5 @@ function saveName() {
         alert("Digite seu nome antes de entrar.");
     }
 }
+
+let humorSelecionado = '';
