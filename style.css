@@ -32,3 +32,20 @@ body {
     margin-top: -50px;
     font-size: 70px;
 }
+
+h3 {
+    font-family: 'Sour Gummy';
+    text-align: center;
+    color: #6b3fa0;
+    margin-top: 20px;
+    margin-bottom: -25px;
+    font-size: 30px;
+}
+
+h2{
+    font-family: 'Sour Gummy';
+    text-align: center;
+    color: #6b3fa0;
+    margin-top: 8px;
+    font-size: 30px;
+}
