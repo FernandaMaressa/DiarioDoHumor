@@ -247,3 +247,19 @@ button:hover {
     transition: top 0.5s ease;
     display: none;
 }
+
+.wave-bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    transform: rotate(180deg);
+    z-index: -1; /* para ficar atrás do conteúdo */
+}
+
+.wave-bottom svg {
+    display: block;
+    width: 100%;
+    height: 450px;
+}
