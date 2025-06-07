@@ -61,3 +61,20 @@ function mostrarHistorico() {
         div.innerHTML += `<p>${reg.dia}: ${reg.humor} "${reg.motivo}"</p>`;
     });
 }
+
+function mostrarResumo() {
+    const nome = localStorage.getItem('nomeUsuario');
+    const historico = JSON.parse(localStorage.getItem(`historico_${nome}`)) || [];
+    const resumo = {};
+
+    historico.forEach(reg => {
+        resumo[reg.humor] = (resumo[reg.humor] || 0) + 1;
+    });
+
+ const div = document.getElementById('resumo');
+    div.innerHTML = '';
+
+    for (let humor in resumo) {
+        div.innerHTML += `<p>${humor} x${resumo[humor]}</p>`;
+    }
+}
