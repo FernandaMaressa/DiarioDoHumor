@@ -224,3 +224,15 @@ button:hover {
     background: #f48db1;
     color: white;
 }
+
+#historico, #resumo {
+    background-color: #f8aecb;
+    color: #6b3fa0;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 10px #fff(0,0,0,0.1);
+    font-family: 'Fredoka';
+}
