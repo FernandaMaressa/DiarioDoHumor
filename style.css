@@ -127,3 +127,29 @@ h2{
     background: #f48db1;
     color: #6b3fa0;
 }
+
+@keyframes bordaAnimada {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.login-box::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 25px;
+    background: linear-gradient(270deg, #f8aecb, #caa3ff, #a5e0ff, #f8aecb);
+    background-size: 600% 600%;
+    animation: bordaAnimada 8s ease infinite;
+    z-index: -1;
+}
