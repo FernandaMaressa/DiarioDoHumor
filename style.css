@@ -66,3 +66,15 @@ h2{
     gap: 1.5rem;
     padding: 2rem;
 }
+
+.imagem-diario {
+    width: 550px;
+    max-width: 100%;
+    animation: pulsar 2s infinite ease-in-out;
+}
+
+@keyframes pulsar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
