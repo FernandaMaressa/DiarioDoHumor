@@ -9,6 +9,26 @@
     <div class="container coluna">
         <h1 id="diarioTitulo"></h1>
         <h2>Como você está hoje?</h2>
+
+         <div id="humores">
+            <!-- Emoções -->
+            <div class="humor-opcao"><img src="img/feliz.png" alt="Feliz"><button onclick="selecionarHumor('Feliz')">Feliz</button></div>
+            <div class="humor-opcao"><img src="img/triste.png" alt="Triste"><button onclick="selecionarHumor('Triste')">Triste</button></div>
+            <div class="humor-opcao"><img src="img/irritado.png" alt="Irritado"><button onclick="selecionarHumor('Irritado')">Irritado</button></div>
+            <div class="humor-opcao"><img src="img/estressado.png" alt="Estressado"><button onclick="selecionarHumor('Estressado')">Estressado</button></div>
+            <div class="humor-opcao"><img src="img/ansioso.png" alt="Ansioso"><button onclick="selecionarHumor('Ansioso')">Ansioso</button></div>
+            <div class="humor-opcao"><img src="img/apatico.png" alt="Apático"><button onclick="selecionarHumor('Apático')">Apático</button></div>
+            <div class="humor-opcao"><img src="img/apaixonado.png" alt="Apaixonado"><button onclick="selecionarHumor('Apaixonado')">Apaixonado</button></div>
+        </div>
+
+        <textarea id="motivo" placeholder="Motivo..."></textarea>
+        <button onclick="salvarHumor()">Salvar humor do dia</button>
+
+        <h3>Histórico da Semana:</h3>
+        <div id="historico"></div>
+
+        <h3>Resumo do Humor:</h3>
+        <div id="resumo"></div>
     </div>
     <img id="emocaoImagem" src="" alt="Emoção">
     <script src="script.js"></script>
