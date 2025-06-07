@@ -58,3 +58,11 @@ h2{
     gap: 100px;
     flex-wrap: wrap;
 }
+
+.container.coluna {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem;
+}
