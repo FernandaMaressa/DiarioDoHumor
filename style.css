@@ -207,3 +207,20 @@ textarea {
 textarea:focus {
     outline: 2px solid #f48db1;
 }
+
+button {
+    background: #f8aecb;
+    color: #6b3fa0;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #f48db1;
+    color: white;
+}
