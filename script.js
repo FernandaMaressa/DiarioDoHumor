@@ -50,3 +50,14 @@ function salvarHumor() {
     mostrarHistorico();
     mostrarResumo();
 }
+
+function mostrarHistorico() {
+    const nome = localStorage.getItem('nomeUsuario');
+    const historico = JSON.parse(localStorage.getItem(`historico_${nome}`)) || [];
+    const div = document.getElementById('historico');
+    div.innerHTML = '';
+
+    historico.forEach(reg => {
+        div.innerHTML += `<p>${reg.dia}: ${reg.humor} "${reg.motivo}"</p>`;
+    });
+}
