@@ -87,3 +87,27 @@ window.onload = function () {
         mostrarResumo();
     }
 }
+
+function mostrarImagemEmocao(humor) {
+    const imagem = document.getElementById('emocaoImagem');
+    imagem.src = `img/${humor.toLowerCase()}.png`;
+    imagem.style.display = 'block';
+    imagem.style.transition = 'top 0.6s ease, opacity 0.3s ease';
+
+    imagem.style.top = '-120px';
+    imagem.style.opacity = '0';
+
+    setTimeout(() => {
+        imagem.style.top = '20px';
+        imagem.style.opacity = '1';
+    }, 50);
+
+    setTimeout(() => {
+        imagem.style.top = '-120px';
+        imagem.style.opacity = '0';
+
+        setTimeout(() => {
+            imagem.style.display = 'none';
+        }, 600); 
+    }, 3000);
+}
