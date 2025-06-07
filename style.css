@@ -78,3 +78,20 @@ h2{
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
 }
+
+.login-box {
+    position: relative;
+    background-color: #fff;
+    padding: 30px 50px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(107, 63, 160, 0.1);
+    text-align: center;
+    z-index: 1;
+}
+
+.login-box h2 {
+    font-family: 'Fredoka';
+    color: #6b3fa0;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
