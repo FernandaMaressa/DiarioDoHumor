@@ -190,3 +190,20 @@ h2{
 .humor-opcao img.selecionado {
     border-color: #6b3fa0;
 }
+
+textarea {
+    width: 100%;
+    max-width: 600px;
+    min-height: 200px;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: #f8aecb;
+    color: #6b3fa0;
+    border: none;
+    resize: vertical;
+    font-size: 1rem;
+}
+
+textarea:focus {
+    outline: 2px solid #f48db1;
+}
