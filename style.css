@@ -153,3 +153,40 @@ h2{
     animation: bordaAnimada 8s ease infinite;
     z-index: -1;
 }
+
+#humores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    background-color: #f8aecb;
+    color: #6b3fa0;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px #6b3fa0(0,0,0,0.1);
+}
+
+.humor-opcao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.humor-opcao img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 30%;
+    border: 3px solid transparent;
+    transition: transform 0.2s, border 0.2s;
+}
+
+.humor-opcao img:hover {
+    transform: scale(1.1);
+}
+
+.humor-opcao img.selecionado {
+    border-color: #6b3fa0;
+}
