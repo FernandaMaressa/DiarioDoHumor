@@ -1,6 +1,7 @@
+// Salva o nome do usuário no localStorage e redireciona para a página do diário
 function saveName() {
     const nome = document.getElementById('username').value;
-    if (nome.trim() !== "") {
+    if (nome.trim() !== "") {      // Verifica se o campo de nome não está vazio
         localStorage.setItem('nomeUsuario', nome);
         window.location.href = 'diario.html';
     } else {
@@ -8,8 +9,10 @@ function saveName() {
     }
 }
 
+// Variável global para armazenar o humor selecionado
 let humorSelecionado = '';
 
+// Função chamada quando o usuário clica em um humor (evento de clique)
 function selecionarHumor(humor) {
     humorSelecionado = humor;
 
@@ -29,6 +32,7 @@ function selecionarHumor(humor) {
     mostrarImagemEmocao(humor);
 }
 
+// Salva o humor e o motivo no localStorage, e atualiza o histórico e o resumo
 function salvarHumor() {
     const motivo = document.getElementById('motivo').value;
     const nome = localStorage.getItem('nomeUsuario'); // pega o usuário atual
@@ -51,6 +55,7 @@ function salvarHumor() {
     mostrarResumo();
 }
 
+// Exibe o histórico de humores registrados pelo usuário
 function mostrarHistorico() {
     const nome = localStorage.getItem('nomeUsuario');
     const historico = JSON.parse(localStorage.getItem(`historico_${nome}`)) || [];
@@ -62,6 +67,7 @@ function mostrarHistorico() {
     });
 }
 
+// Mostra um resumo com a contagem de cada humor selecionado
 function mostrarResumo() {
     const nome = localStorage.getItem('nomeUsuario');
     const historico = JSON.parse(localStorage.getItem(`historico_${nome}`)) || [];
@@ -79,6 +85,7 @@ function mostrarResumo() {
     }
 }
 
+// Executa assim que a página for carregada (evento window.onload)
 window.onload = function () {
     const nome = localStorage.getItem('nomeUsuario');
     if (nome && document.getElementById('diarioTitulo')) {
@@ -88,6 +95,7 @@ window.onload = function () {
     }
 }
 
+// Atualiza a imagem de emoção com animação temporária
 function mostrarImagemEmocao(humor) {
     const imagem = document.getElementById('emocaoImagem');
     imagem.src = `img/${humor.toLowerCase()}.png`;
@@ -108,6 +116,6 @@ function mostrarImagemEmocao(humor) {
 
         setTimeout(() => {
             imagem.style.display = 'none';
-        }, 600); 
+        }, 600); // Espera o fade out antes de ocultar
     }, 3000);
 }
