@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Diário do Humor</title>
+    <!-- Link para o arquivo de estilos -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Container principal com layout em coluna -->
     <div class="container coluna">
         <h1 id="diarioTitulo"></h1>
         <h2>Como você está hoje?</h2>
@@ -20,13 +22,15 @@
             <div class="humor-opcao"><img src="img/apatico.png" alt="Apático"><button onclick="selecionarHumor('Apático')">Apático</button></div>
             <div class="humor-opcao"><img src="img/apaixonado.png" alt="Apaixonado"><button onclick="selecionarHumor('Apaixonado')">Apaixonado</button></div>
         </div>
-
+        <!-- Campo para escrever o motivo do humor -->
         <textarea id="motivo" placeholder="Motivo..."></textarea>
         <button onclick="salvarHumor()">Salvar humor do dia</button>
 
+        <!-- Histórico de humores registrados -->
         <h3>Histórico da Semana:</h3>
         <div id="historico"></div>
 
+         <!-- Resumo das emoções registradas -->
         <h3>Resumo do Humor:</h3>
         <div id="resumo"></div>
     </div>
@@ -35,7 +39,11 @@
     <path fill="#f8abce" d="M0,32L48,48C96,64,192,96,288,96C384,96,480,64,576,64C672,64,768,96,864,106.7C960,117,1056,107,1152,85.3C1248,64,1344,32,1392,16L1440,0L1440,0L0,0Z"></path>
       </svg>
     </div>
+
+    <!-- Imagem que pode mudar conforme a emoção selecionada -->
     <img id="emocaoImagem" src="" alt="Emoção">
+
+    <!-- Arquivo JavaScript que controla a lógica -->
     <script src="script.js"></script>
 </body>
 </html>
